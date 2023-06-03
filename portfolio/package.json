@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "yarn install && yarn run build && cd cdk && yarn install && yarn run cdk-synth && yarn run cdk-deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
