@@ -11,7 +11,7 @@ const meta: Meta<typeof AnimatedWave> = {
 export default meta;
 
 const CustomBox = styled(Box)({
-  background: 'linear-gradient(60deg, rgba(39, 68, 114,1) 0%, rgba(88, 133, 175,1)  100%)',
+  background: 'linear-gradient(60deg, rgba(84, 107, 128,1) 0%, rgba(14, 35, 54,1)  100%)',
   // backgroundColor: "#273C72",
   position: 'relative',
   margin: 0

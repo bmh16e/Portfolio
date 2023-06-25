@@ -1,21 +1,45 @@
-import { Box } from '@mui/material';
+import React from 'react';
+import { Grid } from '@mui/material';
+import { NavLink } from '../components/NavLink';
+import { Button } from '../components/Button';
 
-export interface HeaderProps { }
+export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
-  const image =
-    'data:image/svg+xml;utf8,<svg viewBox="0 0 2527 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(39, 68, 114, 1)" d="M 0 0 C 637 0 637 110 1274 110 L 1274 110 L 1274 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(39, 68, 114, 1)" d="M 1273 110 C 1908 110 1908 0 2543 0 L 2543 0 L 2543 0 L 1273 0 Z" stroke-width="0"></path> </svg>';
   return (
-    <Box
+    <Grid
+      justifyContent="right"
+      padding={2}
       sx={{
-        display: 'block',
-        position: 'relative',
-        top: '-2px',
-        height: '200px',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: "url('" + image + "')",
-        animation: 'wave linear infinite 5s'
-      }}></Box>
+        background: 'linear-gradient(60deg, #508BBF 0%, #024873  50%, #5E3727 100%)'
+      }}
+      container
+      width="100%">
+      <Grid item mx={2}>
+        <NavLink href="/" display="block" color="secondary">
+          Home
+        </NavLink>
+      </Grid>
+      <Grid item mx={2}>
+        <NavLink href="/about" display="block" color="secondary">
+          About
+        </NavLink>
+      </Grid>
+      <Grid item mx={2}>
+        <NavLink href="#" display="block" color="secondary">
+          Experience
+        </NavLink>
+      </Grid>
+      <Grid item mx={2}>
+        <NavLink href="#" display="block" color="secondary">
+          Projects
+        </NavLink>
+      </Grid>
+      <Grid item mx={2}>
+        <Button variant="outlined" color="secondary">
+          Resume
+        </Button>
+      </Grid>
+    </Grid>
   );
 };

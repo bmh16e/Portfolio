@@ -8,9 +8,9 @@ const meta: Meta<typeof NavLink> = {
 
 export default meta;
 
-export const Text: StoryObj<typeof NavLink> = {
+export const Default: StoryObj<typeof NavLink> = {
   args: {
     children: 'NavLink',
-    href: '#'
+    color: 'primary'
   }
 };

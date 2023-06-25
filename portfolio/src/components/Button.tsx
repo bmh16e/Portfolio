@@ -1,3 +1,4 @@
+import React, { MouseEventHandler } from 'react';
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from '@mui/material';
 
 export interface ButtonProps {
@@ -11,6 +12,8 @@ export interface ButtonProps {
   size?: MuiButtonProps['size'];
   sx?: MuiButtonProps['sx'];
   disableRipple?: MuiButtonProps['disableRipple'];
+  onMouseOver?: MouseEventHandler<HTMLButtonElement>;
+  onMouseOut?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {

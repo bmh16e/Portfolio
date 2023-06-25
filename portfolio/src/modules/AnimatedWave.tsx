@@ -1,3 +1,4 @@
+import React from 'react';
 import { styled } from '@mui/material/styles';
 
 export interface AnimatedWaveProps {}
@@ -8,6 +9,7 @@ export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
     width: '100%',
     height: '15vh',
     marginBottom: '-7px' /*Fix for bottom gap*/,
+    marginTop: -150,
     minHeight: '100px',
     maxHeight: '150px',
     '.parallax > use': {
@@ -54,6 +56,10 @@ export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
         <use xlinkHref="#a" x={48} y={3} fill="rgba(255,255,255,0.5)" />
         <use xlinkHref="#a" x={48} y={5} fill="rgba(255,255,255,0.3)" />
         <use xlinkHref="#a" x={48} y={7} fill="#fff" />
+        {/* <use xlinkHref="#a" x={48} fill="rgba(243, 243, 243,0.7)" />
+        <use xlinkHref="#a" x={48} y={3} fill="rgba(243, 243, 243,0.5)" />
+        <use xlinkHref="#a" x={48} y={5} fill="rgba(243, 243, 243,0.3)" />
+        <use xlinkHref="#a" x={48} y={7} fill="#f3f3f3" /> */}
       </g>
     </SVG>
   );

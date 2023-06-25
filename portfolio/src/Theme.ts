@@ -1,11 +1,13 @@
 import { createTheme } from '@mui/material';
-import '@fontsource/metropolis';
 import '@fontsource/lekton';
 import '@fontsource/roboto';
 import '@fontsource-variable/roboto-mono';
 
 const Theme = createTheme({
   palette: {
+    background: {
+      // paper: 'rgb(237, 237, 237)'
+    },
     primary: {
       main: '#265C8C'
     },
@@ -18,14 +20,14 @@ const Theme = createTheme({
       fontFamily: 'Roboto Mono Variable'
     },
     subtitle2: {
-      fontWeight: 300,
-      fontFamily: 'metropolis'
+      fontWeight: 300
     },
     body1: {
-      fontFamily: 'Roboto Mono Variable'
+      fontSize: '1.3rem'
     },
     body2: {
-      fontFamily: 'lekton'
+      fontFamily: 'lekton',
+      fontSize: '1.2rem'
     }
   }
 });
