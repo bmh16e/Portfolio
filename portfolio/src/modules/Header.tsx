@@ -3,6 +3,8 @@ import { Grid } from '@mui/material';
 import { NavLink } from '../components/NavLink';
 import { Button } from '../components/Button';
 
+const pdf = require('../Assets/static/files/Benjamin_Hybart_Resume_2023.pdf');
+
 export interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
@@ -26,17 +28,17 @@ export const Header: React.FC<HeaderProps> = () => {
         </NavLink>
       </Grid>
       <Grid item mx={2}>
-        <NavLink href="#" display="block" color="secondary">
+        <NavLink href="/experience" display="block" color="secondary">
           Experience
         </NavLink>
       </Grid>
       <Grid item mx={2}>
-        <NavLink href="#" display="block" color="secondary">
+        <NavLink href="/projects" display="block" color="secondary">
           Projects
         </NavLink>
       </Grid>
       <Grid item mx={2}>
-        <Button variant="outlined" color="secondary">
+        <Button href={pdf} target="_blank" variant="outlined" color="secondary">
           Resume
         </Button>
       </Grid>

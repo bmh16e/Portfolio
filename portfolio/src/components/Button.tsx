@@ -14,6 +14,7 @@ export interface ButtonProps {
   disableRipple?: MuiButtonProps['disableRipple'];
   onMouseOver?: MouseEventHandler<HTMLButtonElement>;
   onMouseOut?: MouseEventHandler<HTMLButtonElement>;
+  target?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {

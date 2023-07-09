@@ -10,5 +10,5 @@ const meta: Meta<typeof SocialIcon> = {
 export default meta;
 
 export const Default: StoryObj<typeof SocialIcon> = {
-  render: () => <SocialIcon label="GitHub" icon={GitHub} />
+  render: () => <SocialIcon href="" label="GitHub" icon={GitHub} />
 };

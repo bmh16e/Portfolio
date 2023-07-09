@@ -41,21 +41,21 @@ export const Intro: React.FC<IntroProps> = () => {
   return (
     <Box color={'white'}>
       <Stack direction="column" justifyContent={'center'}>
-        <GreetText fontSize="clamp(2rem,6vw,4rem)" textTransform="uppercase" variant="h1">
+        <GreetText textTransform="uppercase" variant="h1">
           Hello World
         </GreetText>
-        <NameText fontSize="clamp(1.5rem,5vw,3.25rem)" variant="subtitle2">
-          My name is Ben
-        </NameText>
-        <SoftWareText fontSize="clamp(1.1rem,3vw,1.9rem)" variant="body2">
-          and I am a Software Engineer
-        </SoftWareText>
+        <NameText variant="subtitle2">My name is Ben</NameText>
+        <SoftWareText variant="body2">and I&apos;m a Software Engineer</SoftWareText>
       </Stack>
       <Stack mt={2} direction="row" alignItems="center" gap={3} fontSize="45px">
         <Divider color="white" sx={{ width: '15%' }} />
-        <SocialIcon label="LinkedIn" icon={LinkedIn} />
-        <SocialIcon label="GitHub" icon={GitHub} />
-        <SocialIcon label="Email" icon={Email} />
+        <SocialIcon
+          href="https://www.linkedin.com/in/benjamin-hybart/"
+          label="LinkedIn"
+          icon={LinkedIn}
+        />
+        <SocialIcon href="https://github.com/bmh16e" label="GitHub" icon={GitHub} />
+        <SocialIcon href="mailto:benhybart@gmail.com" label="Email" icon={Email} />
         <Divider color="white" sx={{ width: '15%' }} />
       </Stack>
     </Box>

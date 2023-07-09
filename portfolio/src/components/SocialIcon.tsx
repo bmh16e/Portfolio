@@ -5,9 +5,10 @@ import { Box, SvgIcon, Typography } from '@mui/material';
 export interface SocialIconProps {
   icon: SvgIconComponent;
   label: string;
+  href: string;
 }
 
-export const SocialIcon: React.FC<SocialIconProps> = ({ icon, label }) => {
+export const SocialIcon: React.FC<SocialIconProps> = ({ icon, label, href }) => {
   const [hover, setHover] = useState(false);
   const onHover = () => {
     setHover(true);
@@ -19,14 +20,17 @@ export const SocialIcon: React.FC<SocialIconProps> = ({ icon, label }) => {
   return (
     <Box position="relative">
       <SvgIcon
+        onClick={() => {
+          window.open(href, '_blank');
+        }}
         onMouseOut={onLeave}
         onMouseOver={onHover}
         cursor="pointer"
         fontSize="inherit"
-        component={icon}>
-        {label}
-      </SvgIcon>
+        component={icon}
+      />
       <Typography
+        fontSize="1rem"
         position="absolute"
         style={{
           transform: 'translate(-50%)',
