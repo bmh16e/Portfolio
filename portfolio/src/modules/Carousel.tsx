@@ -11,7 +11,7 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import { Grid, Paper, Typography } from '@mui/material';
 
 const storybookImg = require('../Assets/static/images/Storybook.jpg') as string;
-const unrealImg = require('../Assets/static/images/Unreal Engine.jpg') as string;
+const unrealImg = require('../Assets/static/images/Unreal_Engine.jpg') as string;
 const vsCodeImg = require('../Assets/static/images/VSCode.jpg') as string;
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);

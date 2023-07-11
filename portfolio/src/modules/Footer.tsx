@@ -14,6 +14,7 @@ export const Footer: React.FC<FooterProps> = () => {
       alignItems={'center'}
       padding={2}
       sx={{
+        // background: 'linear-gradient(60deg, #A67B56 0%,  #40140A 100%)'
         background: 'linear-gradient(60deg, rgba(84, 107, 128,1) 0%, rgba(14, 35, 54,1)  100%)'
         // background:
         //   'linear-gradient(to top, rgba(14, 35, 54,1)  0%,   rgba(84, 107, 128,1) 85%, rgba(255, 255, 255,1)  100%)'
