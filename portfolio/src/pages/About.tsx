@@ -7,7 +7,7 @@ export interface AboutProps {}
 export const About: React.FC<AboutProps> = () => {
   return (
     <Grid pt={5} container justifyContent="center">
-      <Grid item sm={4}>
+      <Grid item xs={10} md={8} lg={6} xl={4}>
         <Paper elevation={3} sx={{ p: 3, width: '100%' }}>
           <Box
             minHeight={450}

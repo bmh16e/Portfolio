@@ -12,7 +12,7 @@ export interface RecentWorkProps {}
 export const RecentWork: React.FC<RecentWorkProps> = () => {
   return (
     <Grid pt={5} container justifyContent="center">
-      <Grid item xs={10} md={6} xl={3}>
+      <Grid item xs={10} md={8} lg={6} xl={4}>
         <Paper
           elevation={3}
           sx={{

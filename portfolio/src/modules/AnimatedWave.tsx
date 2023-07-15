@@ -11,7 +11,7 @@ export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
     position: 'relative',
     width: '100%',
     height: '15vh',
-    marginBottom: '-7px' /*Fix for bottom gap*/,
+    marginBottom: '-8px' /*Fix for bottom gap*/,
     marginTop: -150,
     minHeight: '100px',
     maxHeight: '150px',
