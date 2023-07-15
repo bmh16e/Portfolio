@@ -1,16 +1,17 @@
 import { Box, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { ExperienceEntry, ProjectEntry } from '../data';
+import { Chip } from '../components/Chip';
 
 export interface SectionProps {
   sectionInfo: ProjectEntry | ExperienceEntry;
 }
 
 export const Section: React.FC<SectionProps> = ({
-  sectionInfo: { title, dates, subtitle, summary, skills, bulletPoints, divider }
+  sectionInfo: { id, title, dates, subtitle, summary, skills, bulletPoints, divider }
 }) => {
   return (
-    <Box>
+    <Box id={id}>
       <Grid container direction="column">
         <Grid item display="flex" justifyContent="space-between">
           <Typography variant="h4">{title}</Typography>
@@ -21,10 +22,14 @@ export const Section: React.FC<SectionProps> = ({
         <Grid item sm={12}>
           <Typography variant="subtitle1">{subtitle}</Typography>
         </Grid>
-        <Grid item sm={12} my={1}>
+        <Grid item sm={12} mt={1}>
           <Typography>{summary}</Typography>
         </Grid>
-        <Grid item>{skills && <Typography>{skills.join(', ')}</Typography>}</Grid>
+        <Grid my={1.5} container direction="row">
+          {skills?.map((skill, index) => {
+            return <Chip my={1} mr={1} ml={1} label={skill} key={index} />;
+          })}
+        </Grid>
       </Grid>
       <Grid ml={2} container direction="column">
         {bulletPoints.map((bulletPoint, index) => {

@@ -17,6 +17,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({ icon, label, href }) => 
   const onLeave = () => {
     setHover(false);
   };
+
   return (
     <Box position="relative">
       <SvgIcon
@@ -28,8 +29,10 @@ export const SocialIcon: React.FC<SocialIconProps> = ({ icon, label, href }) => 
         cursor="pointer"
         fontSize="inherit"
         component={icon}
+        sx={{ display: 'flex !important' }}
       />
       <Typography
+        mt={1}
         fontSize="1rem"
         position="absolute"
         style={{

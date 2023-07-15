@@ -28,7 +28,7 @@ export const ColorModeToggle: React.FC<ColorModeToggleProps> = () => {
       }
     },
     '& .MuiSwitch-thumb': {
-      backgroundColor: theme.palette.mode === 'dark' ? 'rgba(7, 22, 35, 1)' : '#001e3c',
+      backgroundColor: theme.palette.mode === 'dark' ? 'rgba(7, 22, 35, 1)' : 'rgba(7, 22, 35, 1)',
       width: 32,
       height: 32,
       '&:before': {

@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = () => {
         />
       </Grid>
       <Grid item mx={2}>
-        <NavLink href="#" color="secondary">
+        <NavLink href="mailto:benhybart@gmail.com" color="secondary">
           Contact Me
         </NavLink>
       </Grid>

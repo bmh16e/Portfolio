@@ -36,7 +36,29 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           }
         }
       }
-    : {})
+    : {
+        palette: {
+          mode,
+          background: {
+            default: '#f5f8ff'
+          },
+          primary: {
+            main: '#265C8C'
+          },
+          secondary: {
+            main: '#FFFFFF'
+          }
+        },
+        components: {
+          MuiPaper: {
+            styleOverrides: {
+              root: {
+                background: '#f5f8ff'
+              }
+            }
+          }
+        }
+      })
 });
 
 export const Theme = {
@@ -52,7 +74,7 @@ export const Theme = {
   typography: {
     h1: {
       fontFamily: 'Roboto Mono Variable',
-      fontSize: '3.75rem'
+      fontSize: '3.5rem'
     },
     h4: {
       fontFamily: 'Roboto Mono Variable',
@@ -74,7 +96,7 @@ export const Theme = {
     },
     body2: {
       fontFamily: 'lekton',
-      fontSize: '1.9rem'
+      fontSize: '1.8rem'
     }
   }
 };

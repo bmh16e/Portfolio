@@ -1,12 +1,16 @@
 import React from 'react';
-import { Box, Divider, Typography, Stack, styled } from '@mui/material';
+import { Box, Divider, Typography, Stack, styled, useTheme } from '@mui/material';
 import { LinkedIn, GitHub, Email } from '@mui/icons-material';
 import { SocialIcon } from '../components/SocialIcon';
 
 export interface IntroProps {}
 
 export const Intro: React.FC<IntroProps> = () => {
+  const theme = useTheme();
   const SoftWareText = styled(Typography)({
+    [theme.breakpoints.down('lg')]: {
+      'text-align': 'center'
+    }
     // width: '29ch',
     // animation: 'typing 1s steps(28)',
     // whiteSpace: 'nowrap',
@@ -18,7 +22,9 @@ export const Intro: React.FC<IntroProps> = () => {
   });
 
   const GreetText = styled(Typography)({
-    transition: ''
+    [theme.breakpoints.down('lg')]: {
+      'text-align': 'center'
+    }
     // width: '12ch',
     // animation: 'typing 1.5s steps(12)',
     // whiteSpace: 'nowrap',
@@ -29,6 +35,9 @@ export const Intro: React.FC<IntroProps> = () => {
   });
 
   const NameText = styled(Typography)({
+    [theme.breakpoints.down('lg')]: {
+      'text-align': 'center'
+    }
     // width: '15ch',
     // animation: 'typing 1.5s steps(12)',
     // whiteSpace: 'nowrap',
@@ -38,8 +47,14 @@ export const Intro: React.FC<IntroProps> = () => {
     // }
   });
 
+  const SocialStack = styled(Stack)({
+    [theme.breakpoints.down('lg')]: {
+      'justify-content': 'center'
+    }
+  });
+
   return (
-    <Box color={'white'}>
+    <Box color="white">
       <Stack direction="column" justifyContent={'center'}>
         <GreetText textTransform="uppercase" variant="h1">
           Hello World
@@ -47,7 +62,7 @@ export const Intro: React.FC<IntroProps> = () => {
         <NameText variant="subtitle2">My name is Ben</NameText>
         <SoftWareText variant="body2">and I&apos;m a Software Engineer</SoftWareText>
       </Stack>
-      <Stack mt={2} direction="row" alignItems="center" gap={3} fontSize="45px">
+      <SocialStack mt={2} direction="row" alignItems="center" gap={3} fontSize="45px">
         <Divider color="white" sx={{ width: '15%' }} />
         <SocialIcon
           href="https://www.linkedin.com/in/benjamin-hybart/"
@@ -57,7 +72,7 @@ export const Intro: React.FC<IntroProps> = () => {
         <SocialIcon href="https://github.com/bmh16e" label="GitHub" icon={GitHub} />
         <SocialIcon href="mailto:benhybart@gmail.com" label="Email" icon={Email} />
         <Divider color="white" sx={{ width: '15%' }} />
-      </Stack>
+      </SocialStack>
     </Box>
   );
 };

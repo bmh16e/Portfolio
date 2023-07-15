@@ -58,25 +58,25 @@ export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
         <use
           xlinkHref="#a"
           x={48}
-          fill={colorMode === 'dark' ? 'rgba(14, 35, 54,0.3)' : 'rgba(255,255,255,0.7)'}
+          fill={colorMode === 'dark' ? 'rgba(14, 35, 54,0.3)' : 'rgba(245, 248, 255,0.7)'}
         />
         <use
           xlinkHref="#a"
           x={48}
           y={3}
-          fill={colorMode === 'dark' ? 'rgba(14, 35, 54,0.5)' : 'rgba(255,255,255,0.5)'}
+          fill={colorMode === 'dark' ? 'rgba(14, 35, 54,0.5)' : 'rgba(245, 248, 255,0.5)'}
         />
         <use
           xlinkHref="#a"
           x={48}
           y={5}
-          fill={colorMode === 'dark' ? 'rgba(7, 22, 35,0.7)' : 'rgba(255,255,255,0.3)'}
+          fill={colorMode === 'dark' ? 'rgba(7, 22, 35,0.7)' : 'rgba(245, 248, 255,0.3)'}
         />
         <use
           xlinkHref="#a"
           x={48}
           y={7}
-          fill={colorMode === 'dark' ? 'rgba(7, 22, 35, 1)' : 'rgba(255,255,255, 1)'}
+          fill={colorMode === 'dark' ? 'rgba(7, 22, 35, 1)' : 'rgba(245, 248, 255, 1)'}
         />
         {/* <use xlinkHref="#a" x={48} fill="rgba(243, 243, 243,0.7)" />
         <use xlinkHref="#a" x={48} y={3} fill="rgba(243, 243, 243,0.5)" />
