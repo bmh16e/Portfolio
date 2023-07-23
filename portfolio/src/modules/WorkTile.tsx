@@ -31,7 +31,7 @@ export const WorkTile: React.FC<WorkTileProps> = ({ href, sx, image, title, summ
       <Stack direction="row" spacing={2}>
         <Link
           to={`/projects#${href}`}
-          style={{ width: '50%', maxWidth: '50%', overflow: 'hidden' }}>
+          style={{ width: '50%', minWidth: '50%', maxWidth: '50%', overflow: 'hidden' }}>
           <CustomBox minHeight={250} width="100%" />
         </Link>
         <Box>

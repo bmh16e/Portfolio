@@ -47,11 +47,7 @@ export const Intro: React.FC<IntroProps> = () => {
     // }
   });
 
-  const SocialStack = styled(Stack)({
-    [theme.breakpoints.down('lg')]: {
-      'justify-content': 'center'
-    }
-  });
+  const SocialStack = styled(Stack)({});
 
   return (
     <Box color="white">
@@ -62,7 +58,13 @@ export const Intro: React.FC<IntroProps> = () => {
         <NameText variant="subtitle2">My name is Ben</NameText>
         <SoftWareText variant="body2">and I&apos;m a Software Engineer</SoftWareText>
       </Stack>
-      <SocialStack mt={2} direction="row" alignItems="center" gap={3} fontSize="45px">
+      <SocialStack
+        justifyContent="center"
+        mt={2}
+        direction="row"
+        alignItems="center"
+        gap={3}
+        fontSize="45px">
         <Divider color="white" sx={{ width: '15%' }} />
         <SocialIcon
           href="https://www.linkedin.com/in/benjamin-hybart/"

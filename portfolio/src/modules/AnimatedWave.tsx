@@ -1,12 +1,12 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { ColorModeContext } from '../Theme';
 
 export interface AnimatedWaveProps {}
 
 export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
   const { colorMode } = React.useContext(ColorModeContext);
-
+  const theme = useTheme();
   const SVG = styled('svg')({
     position: 'relative',
     width: '100%',
@@ -15,6 +15,12 @@ export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
     marginTop: -150,
     minHeight: '100px',
     maxHeight: '150px',
+    [theme.breakpoints.down('sm')]: {
+      height: '40px',
+      minHeight: '40px',
+      marginTop: 15
+    },
+
     '.parallax > use': {
       animation: 'move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite'
     },
@@ -78,10 +84,6 @@ export const AnimatedWave: React.FC<AnimatedWaveProps> = () => {
           y={7}
           fill={colorMode === 'dark' ? 'rgba(7, 22, 35, 1)' : 'rgba(245, 248, 255, 1)'}
         />
-        {/* <use xlinkHref="#a" x={48} fill="rgba(243, 243, 243,0.7)" />
-        <use xlinkHref="#a" x={48} y={3} fill="rgba(243, 243, 243,0.5)" />
-        <use xlinkHref="#a" x={48} y={5} fill="rgba(243, 243, 243,0.3)" />
-        <use xlinkHref="#a" x={48} y={7} fill="#f3f3f3" /> */}
       </g>
     </SVG>
   );

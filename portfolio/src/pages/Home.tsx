@@ -1,40 +1,84 @@
 import React from 'react';
 import { AnimatedWave } from '../modules/AnimatedWave';
 import { MediaCard } from '../modules/MediaCard';
-import styled from '@emotion/styled';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, useTheme, styled } from '@mui/material';
 import { Intro } from '../modules/Intro';
-import { RecentWork } from '../modules/RecentWork';
+import { Spotlight } from '../modules/Spotlight';
+import { projectEntries } from '../data';
 const image = require('../Assets/static/images/BenH_edited_0000.jpg') as string;
 
 export interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = () => {
+  const theme = useTheme();
   const CustomBox = styled(Box)({
     background: 'linear-gradient(60deg, rgba(84, 107, 128,1) 0%, rgba(14, 35, 54,1)  100%)'
   });
 
+  const CustomGrid = styled(Grid)({
+    [theme.breakpoints.only('sm')]: {
+      justifyContent: 'space-between'
+    }
+  });
+
+  const HomeBox = styled(Box)({
+    [theme.breakpoints.down('sm')]: {
+      marginTop: -135
+    },
+
+    [theme.breakpoints.up('sm')]: {
+      marginTop: -100
+    }
+  });
+
+  const projectIndex = React.useMemo(() => Math.floor(Math.random() * projectEntries.length), []);
+
   return (
     <Box>
       <CustomBox>
-        <Box pt={15} mt={-10}>
-          <Grid container justifyContent="center" zIndex={1} position={'relative'} spacing={2}>
-            <Grid item sm={8} lg={3} xl={2} mx={3} display="flex" justifyContent="center">
+        <HomeBox pt={15}>
+          <CustomGrid
+            container
+            justifyContent="center"
+            zIndex={1}
+            position={'relative'}
+            spacing={2}>
+            <Grid
+              maxWidth="450px !important"
+              item
+              xs={8}
+              sm={4}
+              lg={4}
+              xl={4}
+              mx={3}
+              display="flex">
               <MediaCard
-                sxMedia={{ height: 500, position: 'relative', zIndex: 1 }}
-                sxCard={{ position: 'relative', zIndex: 1 }}
+                sxMedia={{ height: 500, position: 'relative', zIndex: 500 }}
+                sxCard={{ position: 'relative', zIndex: -1 }}
                 image={image}
               />
             </Grid>
-            <Grid display="flex" justifyContent="center" item sm={8} lg={4} xl={3} mx={3} mt={7}>
+            <Grid
+              justifyContent="center"
+              display="flex"
+              item
+              xs={11}
+              sm={5}
+              md={6}
+              lg={4}
+              xl={4}
+              mx={3}
+              mt={7}>
               <Intro />
             </Grid>
-          </Grid>
-        </Box>
+          </CustomGrid>
+        </HomeBox>
         <AnimatedWave />
       </CustomBox>
-      <Grid mt={10} container justifyContent="center">
-        <RecentWork />
+      <Grid container mt={10} justifyContent="center">
+        <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
+          <Spotlight project={projectEntries[projectIndex]} />
+        </Grid>
       </Grid>
     </Box>
   );

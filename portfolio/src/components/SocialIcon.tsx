@@ -19,7 +19,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({ icon, label, href }) => 
   };
 
   return (
-    <Box position="relative">
+    <Box zIndex={1200} position="relative">
       <SvgIcon
         onClick={() => {
           window.open(href, '_blank');

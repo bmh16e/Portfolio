@@ -1,10 +1,12 @@
 import React from 'react';
-import { Switch, styled } from '@mui/material';
+import { Switch, SxProps, Theme, styled } from '@mui/material';
 import { ColorModeContext } from '../Theme';
 
-export interface ColorModeToggleProps {}
+export interface ColorModeToggleProps {
+  sx?: SxProps<Theme>;
+}
 
-export const ColorModeToggle: React.FC<ColorModeToggleProps> = () => {
+export const ColorModeToggle: React.FC<ColorModeToggleProps> = ({ sx }) => {
   const ColorModeSwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -54,5 +56,5 @@ export const ColorModeToggle: React.FC<ColorModeToggleProps> = () => {
 
   const { colorMode, setColorMode } = React.useContext(ColorModeContext);
 
-  return <ColorModeSwitch checked={colorMode === 'dark'} onChange={setColorMode} />;
+  return <ColorModeSwitch sx={sx} checked={colorMode === 'dark'} onChange={setColorMode} />;
 };

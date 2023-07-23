@@ -12,6 +12,7 @@ export interface MediaCardProps {
 export const MediaCard: React.FC<MediaCardProps> = ({ image, sxMedia, sxCard }) => {
   const CustomCard = styled(CardMedia)({
     '&::after': {
+      opacity: 0.99,
       content: '""',
       position: 'absolute',
       borderTopLeftRadius: '500px',
@@ -20,8 +21,11 @@ export const MediaCard: React.FC<MediaCardProps> = ({ image, sxMedia, sxCard }) 
       width: 'clamp(100px,100%,400px)',
       top: '1rem',
       left: '1.25rem',
+      transform: 'translateZ(-1px)',
       height: 500,
-      transform: 'translateZ(-1px)'
+      '@supports (-webkit-touch-callout: none)': {
+        opacity: 0
+      }
     }
   });
 
@@ -30,7 +34,7 @@ export const MediaCard: React.FC<MediaCardProps> = ({ image, sxMedia, sxCard }) 
       sx={{
         aspectRatio: '2 / 3',
         height: 500,
-        width: 'clamp(100px,100%,400px)',
+        width: 'clamp(100px,100%,375px)',
         borderTopLeftRadius: '500px',
         borderTopRightRadius: '500px',
         overflow: 'visible',
