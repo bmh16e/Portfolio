@@ -29,19 +29,26 @@ type SubEntry = {
 export const projectEntries: ProjectEntry[] = [
   {
     title: 'Portfolio',
-    summary: 'The development details of this website',
+    summary: `My Portfolio project is the website you're currently viewing! 
+    I chose React for this website as it's the JavaScript library I'm most comfortable with. 
+    This allowed me the to focus on building a clean, responsive experience without being concerned with understanding
+    the language features of something I'm less familiar with.`,
     id: 'portfolio',
-    skills: ['React', 'AWS', 'CDK', 'Storybook', 'TypeScript'],
+    skills: ['ReactJS', 'Storybook', 'TypeScript', 'AWS', 'CDK'],
     bulletPoints: [
-      'Built a portfolio website using React and Material UI',
-      'Leveraged Storybook to develop and test components in isolation to promote reusability and maintainability',
+      'Built a portfolio website using ReactJS and TypeScript to showcase projects and experience',
+      `Selected Material UI as the component library to leverage its pre-built components and styling to expedite the development process`,
+      'Leveraged Storybook to develop and test custom components in isolation to promote reusability and maintainability',
+      `Incorporated ReactJS hooks and context to manage state and user preferences such as dark vs light mode`,
       'Used AWS CDK to setup a new Cloudfront Distribution and deploy the website to AWS S3'
     ],
     divider: true,
     image: storybookImg
   },
   {
-    title: 'Geohashing Game App',
+    title: 'Geohashing Android App',
+    summary: `This project was my first foray into developing android applications in Java. 
+    I worked with a small team on this project to build a location-based, game app that used the Google Maps API.`,
     skills: ['Java', 'Firebase', 'Android'],
     divider: true,
     bulletPoints: [
@@ -53,30 +60,41 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     title: 'Tune Mover App',
+    summary: `Tune Mover was developed as a project for my software engineering course as FSU. 
+    To this day, it is still one of my favorite applications I've had a hand in building. 
+    I gained valuable experience learning to work with a team of developers 
+    while simultaneously creating a rewarding product.`,
     divider: true,
-    id: 'tunemover',
     skills: ['Python'],
     bulletPoints: [
       'Worked as part of a team to develop a music transfer application for copying music between Google Play Music and Spotify',
-      'Assisted in development of Python module to support retrieval and insertion of appropriate song, artist, and playlist data to and from a user`s Google Play Music Library'
+      'Aided in development of Python module to support retrieval and insertion of appropriate song, artist, and playlist data to and from a user`s Google Play Music Library',
+      `Assisted in integration of UI with core application functionality`
     ],
     image: abstractMusicImg
   },
   {
     title: 'Warehouse Wreckage',
-    summary: 'A small game developed using C++ and Unreal Engine 5',
+    summary: `I am currently learning game development in my free time. 
+    This project is one of the first games I've built using C++ and Unreal Engine 5. 
+    In the future, I hope to build on this experience and develop more sophisticated games.`,
     id: 'unreal',
     skills: ['C++', 'Unreal Engine'],
     bulletPoints: [
       'Used C++ and Unreal Engine to build a game, based on physics, that allows a user to launch a finite number of projectiles at various objects in a warehouse building',
       'Implemented ammo tracking to limit the number of projectiles a user can launch and provide that information to the user in real time',
-      'Incorporated physics into the environment to allow for realistic interactions between objects in the game as the user launches projectiles at them'
+      'Incorporated physics into the environment to allow for realistic interactions between objects in the game as the user shoots projectiles at them'
     ],
     divider: true,
     image: unrealImg
   },
   {
     title: 'FAT32 OpSys Project',
+    summary: `
+    This project was both extremely difficult and time consuming. 
+    Though relatively simple to use,
+    the 1,000 lines of C code required to complete this project were anything but simple.
+    It did, however, provide me with great experience using a low-level language like C to interact with file systems.`,
     divider: true,
     skills: ['C', 'Unix'],
     bulletPoints: [
@@ -87,11 +105,15 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     title: 'Data Structures',
-    summary: 'A collection of projects developed using C++ data structures and algorithms',
+    summary: `This entry includes a few smaller projects I built in C++. 
+    While I have yet to build large scale applications with it,
+    I have a lot of experience with C++ data structures and algorithms,
+    and I'm looking forward to using it more in the near future.
+    `,
     skills: ['C++'],
     bulletPoints: [
       'Leveraged iterators, generic types, and move semantics to build a doubly linked list class in C++ following the version in the Standard Template Library',
-      'Developed a C++ application to collect statistics of word, number, and character usage in a given file using STL data structures'
+      'Developed a C++ application to collect statistics of word, number, and character usage in a given file using STL data structures such as maps and sets'
     ],
     image: algorithmsImg
   }

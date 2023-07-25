@@ -56,13 +56,8 @@ export const Section: React.FC<SectionProps> = ({ sectionInfo }) => {
           <Typography variant="subtitle1">{subtitle}</Typography>
         </Grid>
 
-        <Grid my={1} container direction="row">
-          {skills?.map((skill, index) => {
-            return <Chip my={1} mr={1} label={skill} key={index} />;
-          })}
-        </Grid>
         <Collapse in={!expanded}>
-          <Grid item sm={12}>
+          <Grid item sm={12} mt={1}>
             <Typography variant="body1">{summary}</Typography>
           </Grid>
         </Collapse>
@@ -79,7 +74,7 @@ export const Section: React.FC<SectionProps> = ({ sectionInfo }) => {
                   </Grid>
                   <Grid my={1} container direction="row">
                     {subEntry.subSkills?.map((skill, index) => {
-                      return <Chip my={1} mr={1} label={skill} key={index} />;
+                      return <Chip my={1} mr={1.5} label={skill} key={index} />;
                     })}
                   </Grid>
 
@@ -101,25 +96,33 @@ export const Section: React.FC<SectionProps> = ({ sectionInfo }) => {
             })}
           </Grid>
         ) : (
-          <Grid ml={2} container direction="column" mt={1}>
-            <Box
-              component="ul"
-              sx={{ paddingInlineStart: '10px', paddingInlineEnd: '10px', marginBlock: 0 }}>
-              {bulletPoints?.map((bulletPoint, index) => {
-                return (
-                  <Typography mb={1} component={Li} variant="body1" key={index}>
-                    {bulletPoint}
-                  </Typography>
-                );
+          <Grid>
+            <Grid my={1} container direction="row">
+              {skills?.map((skill, index) => {
+                return <Chip my={1} mr={1.5} label={skill} key={index} />;
               })}
-            </Box>
+            </Grid>
+            <Grid ml={2} container direction="column" mt={1}>
+              <Box
+                component="ul"
+                sx={{ paddingInlineStart: '10px', paddingInlineEnd: '10px', marginBlock: 0 }}>
+                {bulletPoints?.map((bulletPoint, index) => {
+                  return (
+                    <Typography mb={1} component={Li} variant="body1" key={index}>
+                      {bulletPoint}
+                    </Typography>
+                  );
+                })}
+              </Box>
+            </Grid>
           </Grid>
         )}
       </Collapse>
+
       <ExpandMore
         sx={{ display: 'flex', justifyContent: 'right', mt: 3 }}
         onClick={() => setExpanded(!expanded)}>
-        <ExpandMoreIcon />
+        <ExpandMoreIcon className="expand-icon" />
       </ExpandMore>
       {divider && <Divider sx={{ mb: 4 }} />}
     </Box>

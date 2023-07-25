@@ -3,6 +3,7 @@ import { PaletteMode } from '@mui/material';
 import '@fontsource/lekton';
 import '@fontsource/roboto';
 import '@fontsource-variable/roboto-mono';
+import '@fontsource-variable/open-sans';
 
 export const ColorModeContext = createContext({
   colorMode: '',
@@ -22,6 +23,36 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           },
           secondary: {
             main: '#FFFFFF'
+          }
+        },
+        typography: {
+          h1: {
+            fontFamily: 'Roboto Mono Variable',
+            fontSize: 'clamp(2.5rem,6vw,3.75rem)'
+          },
+          h4: {
+            fontFamily: 'Roboto Mono Variable',
+            fontWeight: 500,
+            fontSize: '2rem'
+          },
+          subtitle2: {
+            fontWeight: 300,
+            fontSize: 'clamp(2rem,5vw,3.25rem)'
+          },
+          subtitle1: {
+            fontWeight: 600,
+            fontSize: '1.35rem',
+            fontFamily: 'Roboto Mono Variable'
+            // letterSpacing: '0.001rem'
+          },
+          body1: {
+            fontSize: '1.2rem',
+            fontFamily: 'Open Sans Variable',
+            fontWeight: 325
+          },
+          body2: {
+            fontFamily: 'lekton',
+            fontSize: 'clamp(1.2rem,2.8vw,1.8rem)'
           }
         },
         components: {
@@ -49,6 +80,36 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             main: '#FFFFFF'
           }
         },
+        typography: {
+          h1: {
+            fontFamily: 'Roboto Mono Variable',
+            fontSize: 'clamp(2.5rem,6vw,3.75rem)'
+          },
+          h4: {
+            fontFamily: 'Roboto Mono Variable',
+            fontWeight: 500,
+            fontSize: '2rem'
+          },
+          subtitle2: {
+            fontWeight: 300,
+            fontSize: 'clamp(2rem,5vw,3.25rem)'
+          },
+          subtitle1: {
+            fontWeight: 600,
+            fontSize: '1.35rem',
+            fontFamily: 'Roboto Mono Variable'
+            // letterSpacing: '0.001rem'
+          },
+          body1: {
+            fontSize: '1.2rem',
+            fontFamily: 'Open Sans Variable',
+            fontWeight: 400
+          },
+          body2: {
+            fontFamily: 'lekton',
+            fontSize: 'clamp(1.2rem,2.8vw,1.8rem)'
+          }
+        },
         components: {
           MuiPaper: {
             styleOverrides: {
@@ -74,7 +135,7 @@ export const Theme = {
   typography: {
     h1: {
       fontFamily: 'Roboto Mono Variable',
-      fontSize: '3.5rem'
+      fontSize: 'clamp(2.5rem,6vw,3.75rem)'
     },
     h4: {
       fontFamily: 'Roboto Mono Variable',
@@ -83,7 +144,7 @@ export const Theme = {
     },
     subtitle2: {
       fontWeight: 300,
-      fontSize: '3.2rem'
+      fontSize: 'clamp(2rem,5vw,3.25rem)'
     },
     subtitle1: {
       fontWeight: 600,
@@ -92,11 +153,13 @@ export const Theme = {
       // letterSpacing: '0.001rem'
     },
     body1: {
-      fontSize: '1.1rem'
+      fontSize: '1.1rem',
+      fontFamily: 'Open Sans Variable',
+      fontWeight: 400
     },
     body2: {
       fontFamily: 'lekton',
-      fontSize: '1.8rem'
+      fontSize: 'clamp(1.2rem,2.8vw,1.8rem)'
     }
   }
 };

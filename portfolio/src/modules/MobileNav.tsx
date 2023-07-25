@@ -13,7 +13,7 @@ export const MobileNav: React.FC<MobileNavProps> = () => {
         <Menu color="secondary" />
       </IconButton>
       <Drawer
-        swipeAreaWidth={150}
+        swipeAreaWidth={110}
         keepMounted
         disableSwipeToOpen={false}
         onOpen={() => setOpen(true)}

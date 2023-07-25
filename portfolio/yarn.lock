@@ -1979,6 +1979,11 @@
   resolved "https://registry.yarnpkg.com/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz#c05ed35ad82df8e6ac616c68b92c2282bd083ba4"
   integrity sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==
 
+"@fontsource-variable/open-sans@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/open-sans/-/open-sans-5.0.6.tgz#d92c5de9843b999d914e444afda54c39a752d949"
+  integrity sha512-ZEbqIsXo84fQeQwU2CPyI3W+8QMdbTVBS+CRbWBDA8nPbV9pyRCBy3UceyPrA7l1MJx4qaz5wv5hHQXDadgCzg==
+
 "@fontsource-variable/roboto-mono@^5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@fontsource-variable/roboto-mono/-/roboto-mono-5.0.4.tgz#d570b415d1a3fbbafabe5d457ffb2f558955c1c9"

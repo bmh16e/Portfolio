@@ -18,33 +18,36 @@ export const About: React.FC<AboutProps> = () => {
               backgroundPosition: 'center'
             }}
           />
-          <Typography fontSize="150%" my={2}>
+          <Typography fontWeight={500} fontSize="160%" my={2}>
             Hi, I&apos;m Ben
           </Typography>
-          <Typography fontSize="110%" mb={2} variant="body1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus placerat tortor,
-            nec consequat mauris ultrices nec. Aenean lacinia fermentum pharetra. Vestibulum augue
-            lacus, dignissim ullamcorper semper at, cursus nec nisl. Ut pellentesque felis nibh,
-            quis eleifend turpis eleifend in. Sed in leo sapien. Donec vulputate imperdiet dui ac
-            feugiat. Cras ligula massa, laoreet vitae maximus eget, dapibus quis magna.
+          <Typography fontSize="105%" mb={2} variant="body1">
+            I work as a <strong>Software Engineer at Kikoda</strong> where we focus on building
+            custom software solutions for clients in a variety of industries such as healthcare and
+            insurance. There are always a number of different projects in flight in the mobile and
+            web spaces at Kikoda. The range of applications has afforded me the opportunity to gain
+            experience with many current technologies including
+            <strong> ReactJS, C#, MySQL, and AWS</strong> to name a few.
           </Typography>
-          <Typography fontSize="110%" mb={2} variant="body1">
-            Etiam imperdiet bibendum lorem, sit amet congue dolor rutrum et. Nulla venenatis
-            condimentum metus eu sagittis. Vivamus rutrum orci hendrerit ex convallis aliquam.
-            Curabitur tincidunt eu dolor in ultricies. Mauris a diam placerat urna pharetra
-            hendrerit. Sed tincidunt efficitur blandit. Aliquam libero nulla, efficitur eget
-            vestibulum in, gravida a massa. Sed dignissim blandit imperdiet. Nulla in erat massa.
-            Suspendisse potenti. Maecenas consectetur vel mi vel faucibus.
+
+          <Typography fontSize="105%" variant="body1" mb={2}>
+            Prior to joining Kikoda, I worked in Customer Service at Publix while attending
+            <strong> Florida State University.</strong> I graduated with my Bachelor&apos;s in
+            <strong> Computer Science</strong> and a Minor in Mathematics in the spring of 2019. I
+            have a passion for learning and I&apos;m always looking for opportunities to grow and
+            gain new experiences!
           </Typography>
-          <Typography fontSize="110%" variant="body1">
-            Duis rhoncus tempor molestie. Mauris convallis sapien a turpis vestibulum maximus.
-            Mauris a commodo lectus, auctor molestie dolor. Proin eget nisi ipsum. Aliquam erat
-            volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec malesuada nec ex pharetra eleifend. Cras maximus sit amet est id
-            consectetur. Praesent facilisis lorem vitae risus ornare, et pellentesque ex sagittis.
-            Aliquam sit amet massa ac nibh eleifend bibendum sit amet sed risus. Proin ultricies
-            arcu ligula, vel efficitur ligula volutpat eget. Donec imperdiet tortor sem, at
-            consequat lectus condimentum non.
+          <Typography fontSize="105%" variant="body1" mb={2}>
+            Outside of work, I&apos;m an avid gamer, and recently, I&apos;ve been putting my{' '}
+            <strong>C++ </strong>
+            skills to use and learning
+            <strong> Unreal Engine.</strong> I find the creativity poured into developing games and
+            their stories extremely compelling, and I would love to be a part of that industry in
+            the future. Away from the tech world, you can find me either playing Valorant with my
+            friends or living in my local gym, lifting weights.
+          </Typography>
+          <Typography fontSize="105%" mb={2}>
+            Thanks for stopping by my site and don&apos;t hesitate to reach out!
           </Typography>
         </Paper>
       </Grid>
