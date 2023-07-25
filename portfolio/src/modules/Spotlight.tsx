@@ -39,7 +39,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
         color: 'white'
       }}>
       <HeadingText fontFamily="lekton" px={2} py={2} gutterBottom variant="h4">
-        {`<Project Spotlight/>`}
+        {`Project Spotlight`}
       </HeadingText>
 
       <CardMedia component="img" sx={{ px: 2, height: 350 }} image={image} />

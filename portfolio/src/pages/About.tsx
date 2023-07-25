@@ -40,11 +40,11 @@ export const About: React.FC<AboutProps> = () => {
           <Typography fontSize="105%" variant="body1" mb={2}>
             Outside of work, I&apos;m an avid gamer, and recently, I&apos;ve been putting my{' '}
             <strong>C++ </strong>
-            skills to use and learning
+            skills to use while learning
             <strong> Unreal Engine.</strong> I find the creativity poured into developing games and
             their stories extremely compelling, and I would love to be a part of that industry in
             the future. Away from the tech world, you can find me either playing Valorant with my
-            friends or living in my local gym, lifting weights.
+            friends or lifting weights in my local gym.
           </Typography>
           <Typography fontSize="105%" mb={2}>
             Thanks for stopping by my site and don&apos;t hesitate to reach out!
