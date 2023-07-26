@@ -60,6 +60,8 @@ export const Home: React.FC<HomeProps> = () => {
             </Grid>
             <Grid
               justifyContent="center"
+              maxWidth="450px !important"
+              minWidth="450px !important"
               display="flex"
               item
               xs={11}
